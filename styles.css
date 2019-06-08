@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "./assets/styles/commonStyle.css";
+@import "./assets/styles/angularStyle.css";
+@import "./assets/styles/bootstrapOverride.css";
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+@font-face {
+    font-family: 'Expert Sans';
+    src: url('./assets/Fonts/Gudea-Regular.otf');
+  }

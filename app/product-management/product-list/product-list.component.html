@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col-md-3"></div>
+
+
+  <div class="col-md-9">
+    <div class="container-fluid mt-5">
+      <mat-paginator [length]="totalSize" [hidePageSize]="true" [pageIndex]="currentPage"></mat-paginator>
+      <div *ngIf="productModel$ | async as id">
+        <div class="row">
+          <nav class="nav">
+            <a class="nav-link "><b>Sort By</b></a>
+            <div *ngFor="let data of sortBy">
+              <li class="nav-link " [class.selectedSort]="data.type === selectedSortVal" (click)="sortType(data.type)">
+                <b> {{data.value}}</b></li>
+            </div>
+          </nav>
+        </div>
+
+        
+        <div class="row">
+          <!-- List of Products -->
+
+          <div class="col-sm-6" *ngFor="let product of productModel">
+            <div class="card-control">
+              <mat-card mat-raised-card>
+                <div class="zoom">
+                  <img class="img-fluid" alt="smaple image" [src]="product.productImageName[0]"
+                    (click)="viewSingleProduct(product._id)">
+                </div>
+                <div class="car-body">
+                  <h4 class="card-title">{{ product.productName }}</h4>
+                  <div>
+                    <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> {{ product.price }} </p>
+                  </div>
+                </div>
+                <!--    <div class="car-body">
+                    <h4 class="card-title">{{ product.productName }}</h4>
+                    <div>
+                      <p class="card-text"><i class="fa fa-inr" aria-hidden="true"></i> {{ product.price }}</p>
+                    </div>
+                  </div> -->
+
+
+
+                <div class="but-cart">
+                  <div class="overlay">
+                      <button mat-stroked-button class="btnn" (click)="addToCart(product)">
+                          Add to Cart <i class="fa fa-cart-plus fa-1x" aria-hidden="true"></i> </button>
+                </div>
+                  </div>
+
+
+
+
+<!--                   <div class="row" >
+                    <div class="col-md-5">
+                      <div class="Detail-Views">
+                        <button mat-stroked-button class="Detail-View" (click)="viewSingleProduct(product._id)">Detail
+                          View</button>
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="icon-fab">
+                        <button mat-stroked-button class="btnn" (click)="addToCart(product)">
+                          Add to Cart <i class="fa fa-cart-plus fa-1x" aria-hidden="true"></i> </button>
+                      </div>
+                    </div>
+                  </div> -->
+              
+
+                <!-- <p class="card-text">{{ product.color }}</p> -->
+
+                <!--                   <div>
+                    <p class="card-text">{{ product.material }}</p>
+                  </div> -->
+
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        <div class="page-na">
+          <mat-paginator #paginator [pageSize]="pageSize" [hidePageSize]="true" [pageSizeOptions]="[10, 100, 150]"
+            [showFirstLastButtons]="true" [length]="totalSize" [pageIndex]="currentPage" (page)="handlePage($event)"
+            class="paginator">
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

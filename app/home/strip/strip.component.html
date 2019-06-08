@@ -1,0 +1,23 @@
+
+
+
+<!-- <iframe width="697" height="392" src="https://www.youtube.com/embed/OriXBGIeGpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+      <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" *ngFor="let data of strips">
+            <img [src]="data.strip" class="img-respons">
+            <button mat-fab class="fa-play-circle-o" (click)="submit()" >
+                <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
+                         <!--  <button mat-fab class="fa-play-circle-o">
+                            <i class="fa fa-play-circle-o fa-5x" aria-hidden="true"></i>
+                        </button> -->
+   
+
+
+
+             

@@ -1,0 +1,64 @@
+<form [formGroup]="cartForm" novalidate style="padding-top:60px">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-12">
+      <h4 class="p-2">
+        {{productModel?.productName | titlecase}}
+      </h4>
+    </div>
+    <div class="col-md-4 col-6">
+      <h6 class="productHeading" *ngIf="productModel?.price !== ''">
+        Price
+      </h6>
+    </div>
+    <div class="col-md-6 col-6">
+      <label style="white-space: pre-line; line-height: 20px" *ngIf="productModel?.price !== ''">
+        {{productModel?.price}}
+      </label>
+    </div>
+    <div class="col-md-4 col-6">
+      <h6 class="productHeading" *ngIf="productModel?.productDescription !== ''">
+        Description
+      </h6>
+    </div>
+    <div class="col-md-6 col-6">
+      <label style="white-space: pre-line; line-height: 20px" *ngIf="productModel?.productDescription !== ''">
+        {{productModel?.productDescription}}
+      </label>
+    </div>
+    <div class="col-md-4 col-12">
+      <h6 class="productHeading" *ngIf="productModel?.material !== '' || productModel?.brand !== '' ||
+              productModel?.dimensions !== '' ||  productModel?.weight !== '' ||  productModel?.color !== '' ">
+        Product Details
+      </h6>
+    </div>
+
+    <div class="col-md-6 col-6">
+      <h6 *ngIf="productModel?.weight !== ''"><label>Weight</label>: {{productModel?.weight}}</h6>
+      <h6 *ngIf="productModel?.material !== ''"><label>Material</label>: {{productModel?.material}}</h6>
+      <h6 *ngIf="productModel?.dimensions !== ''"><label>Dimensions</label>: {{productModel?.dimensions}}</h6>
+      <h6 *ngIf="productModel?.color !== ''"><label>Color</label>: {{productModel?.color}}</h6>
+    </div>
+    <div class="col-md-6 col-6">
+
+    </div>
+  </div>
+  <div class="row ">
+      <div class="col-md-3 col-6">
+        <div class="btnss">
+          <button mat-raised-button color="primary"  (click)="addToCart(productModel)"><b>Add to Cart</b>
+               </button>
+        </div>
+      </div>
+    <div class="col-md-3 col-6">
+      <div class="btnss">
+        <button mat-raised-button class="btn btn-float-right card-footers"
+          (click)="buySingleProducts(productModel._id)"><b>Book Now</b>
+        
+        </button>
+      </div>
+    </div>
+ 
+</div>
+</div>
+</form>

@@ -1,0 +1,39 @@
+.img-responsive{
+  width: 80px;
+  height: 78px;
+  margin-left: 50px;
+
+}
+.form-control {
+  width: 25%;
+  height: 10%;
+  background: #E5CC76!important;
+  border: 1px solid black;
+  
+}
+.bg-warning{
+  background: #E5CC76 !important;
+}
+.btn-outline{
+  width: 4%;
+  height: auto;
+}
+.sale{
+  color: red;
+  cursor: pointer;
+}
+
+.sale:hover{
+  color: rgb(7, 6, 6);
+  cursor: pointer;
+}
+
+
+::placeholder{
+  color: black;
+  font-size: 14px;
+}
+
+.nav-link{
+  font-family:'Expert Sans';
+}

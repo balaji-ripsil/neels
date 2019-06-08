@@ -1,0 +1,160 @@
+.img-category {
+  width: 100%;
+  height: auto;
+  border: rgb(243, 243, 243) 2px solid;
+}
+
+.img-promo {
+  width: 100%;
+  height: auto;
+  border: rgb(182, 182, 182) 2px solid;
+  border-top: rgb(177, 177, 177) 2px solid;
+}
+
+.imageBanner {
+  width: 100%;
+  height: auto;
+  border-bottom: #cacaca 2px solid;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.imgBannerss {
+  width: 100%;
+  height: auto;
+  border: #f0f0f0 1px solid;
+}
+
+.imgProduct {
+  width: 100%;
+  height: auto;
+
+  
+}
+
+.imageStrip {
+  width: 100%;
+  height: auto;
+  border: #aaaaaa 2px solid;
+
+}
+
+.imageFinals {
+  width: 100%;
+  height: auto;
+  border: 2px solid gray;
+}
+
+/* Button Farmet */
+
+.button {
+  background: white;
+  height: auto;
+  font: 12px 'raleway';
+  background-color: rgb(34, 98, 194);
+  /* Green */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.buttons {
+  padding: 10px 24px;
+}
+
+.button1 {
+  padding: 10px 24px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .img-category {
+
+    width: 100%;
+    height: auto;
+    border: rgb(231, 231, 231) 2px solid;
+
+  }
+
+  .asian-logo{
+    width: 28%;
+    height: 20%;
+    margin-top: 5px;
+  }
+
+  .imgsss {
+    padding: 5px;
+    width: 100%;
+    height: auto;
+  }
+
+  .imgss {
+    padding: 5px;
+    width: 100%;
+    height: auto;
+
+  }
+
+  .shopButton {
+  margin-left: 50px !important;
+  padding-left: 50px !important;
+}
+
+.imageFinals {
+  width: 100%;
+  height: auto;
+  border: 2px solid gray;
+}
+
+}
+
+
+
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.space {
+  padding: 5px;
+
+}
+
+.asian-logo{
+  width: 48%;
+  height: auto;
+  margin-top: 5px;
+  padding: 5px;
+  margin: 5px;
+  padding-bottom: 5px;
+}
+
+
+.img-logo{
+  width: 60px;
+  height: 60px;
+}
+
+.bg-light{
+  height: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 80px;
+  border-bottom: #EC1A3B 00.2ex solid;
+  border-top: #EC1A3B 1px solid;
+}
+
+.gridCover{
+  margin: 10px;
+}
+.gridCoverss{
+  padding: 5px;
+}
+
+

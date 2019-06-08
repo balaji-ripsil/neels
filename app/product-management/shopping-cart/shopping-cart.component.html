@@ -1,0 +1,62 @@
+<div class="m-5">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="row gridImage" *ngFor="let data of shopModel">
+        <div class="col-md-2"><img class="img-fluid" [src]="data?.productImageName">
+        </div>
+        <div class="col-md-3">
+          <h4 class="product-name"><strong>{{data?.productName }}</strong></h4>
+          <h4><small>{{data?.productDescription}}</small></h4>
+          <h4><small>{{data?.price}} </small></h4>
+         
+
+        </div>
+        
+        <div class="col-md-2">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" (click)="action('min', data)"
+                [disabled]="data.set < 0">
+                <span>-</span>
+              </button>
+            </span>
+            <input type="text" [disabled]="true" class="form-control input-number" [value]="data.set">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"
+                (click)="action('add', data)">
+                <span>+</span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-default btn-number" (click)="action('clear', data)">
+            Delete
+          </button>
+        </div>
+        <div class="col-md-2">
+          {{data.set * data.price }}
+        </div>
+
+      </div>
+
+      <div *ngIf="shopModel?.length === 0">
+        Your Cart is Empty
+      </div>
+    </div>
+    <div class="col-md-2" *ngIf="shopModel?.length !== 0">
+      <div class="row gridImage">
+        <div class="col-md-12"> Order Summary</div>
+        <div class="col-md-12 pull-right">
+          <strong>Total: {{total()}}</strong>
+        </div>
+        <div class="col-md-12 pull-right">
+            <button mat-raised-button color="primary"  class="btnn" (click)="placeOrder()">
+               Continue Shopping  </button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
